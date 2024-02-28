@@ -1,0 +1,556 @@
+h1 {
+  font-size: 55px;
+  color: #171147;
+}
+
+h2 {
+  font-size: 40px;
+  color: #171147;
+}
+
+h3 {
+  font-size: 22px;
+  color: #2e2594;
+}
+
+p {
+  font-size: 15px;
+  color: #332b5c;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 786px) {
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 512px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 300px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 11px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.df {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  bottom: 20px;
+  right: 20px;
+  background: #b53071;
+  border-radius: 50%;
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.show__back-top {
+  display: flex;
+}
+
+.btn {
+  width: 170px;
+  height: 50px;
+  background: #b53071;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  border: 1px solid #b53071;
+  transition: 0.4s;
+  padding: 5px 20px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #b53071;
+}
+
+@media (max-width: 500px) {
+  .btn {
+    width: 150px;
+    height: 35px;
+    font-size: 13px;
+  }
+}
+body {
+  background-color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 999;
+}
+
+.show__header__shrink {
+  padding: 15px 0;
+  box-shadow: 0px 0px 10px #b53071;
+  background: white;
+}
+
+.header__nav__logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #171147;
+}
+
+.header__nav__right,
+.header__nav__right__list,
+.header__nav__right__btns {
+  gap: 50px;
+}
+
+.header__nav__right__list__item {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 0px;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  position: relative;
+  transition: 0.3s;
+  color: #2e2594;
+}
+
+.header__nav__right__list__item:hover a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header__nav__right__list__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: red;
+  display: none;
+}
+
+.header__nav__right__btns__contact:hover {
+  border-color: #b53071;
+  background: #b53071;
+  color: white;
+}
+
+.header__nav__right__btns__hamburger {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  display: none;
+}
+
+.header__nav__right__btns__hamburger span {
+  width: 20px;
+  height: 2.5px;
+  background: #171147;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+.header__nav__right__btns__hamburger:hover .header__nav__right__btns__hamburger__line {
+  background: #b53071;
+}
+
+@media (max-width: 700px) {
+  .header__nav__right__list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 0px 15px #b53071;
+    transition: 0.3s;
+    z-index: 9999;
+  }
+  .header__nav__right__btns {
+    gap: 10px;
+  }
+  .header__nav__right__btns__hamburger {
+    display: flex;
+  }
+  .show__header__nav__right__list {
+    left: 0;
+  }
+  .header__nav__right__list__close {
+    display: block;
+  }
+}
+#hero {
+  padding-top: 100px;
+}
+
+body {
+  background: #ebadcb;
+}
+
+.hero__left {
+  width: 35%;
+}
+
+.hero__right {
+  width: 50%;
+}
+
+.hero__right img {
+  width: 100%;
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.video {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 1470px) {
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .hero__left,
+  .hero__right {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .hero__left,
+  .hero__right {
+    width: 100%;
+  }
+}
+#about {
+  padding-top: 100px;
+}
+
+.about__right {
+  width: 35%;
+}
+
+.about__left {
+  width: 50%;
+}
+
+.about__left img {
+  width: 100%;
+}
+
+.about__right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (max-width: 1470px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .about__right {
+    order: 1;
+  }
+  .about__left {
+    order: 2;
+  }
+  .about__right,
+  .about__left {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .about__right,
+  .about__right {
+    width: 100%;
+  }
+}
+.game__top__right__right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game__top__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid transparent;
+}
+
+.game__top__right .card-img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.game__top__left,
+.game__top__right {
+  width: 45%;
+}
+
+@media (max-width: 1470px) {
+  .game__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .game__top__left,
+  .game__top__right {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .game__top__left,
+  .game__top__right {
+    width: 100%;
+  }
+}
+.game__bottom {
+  display: flex;
+  padding-top: 80px;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.game__top__right__card img {
+  width: 100%;
+}
+
+.game__top__right__card {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.streamer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  gap: 50px;
+}
+
+.streamer__videos__left img {
+  width: 100%;
+}
+
+.streamer__videos__right img {
+  width: 100%;
+}
+
+.streamer__videos__left,
+.streamer__videos__right {
+  width: 45%;
+  border: 1px solid transparent;
+  border-radius: 175px;
+}
+
+@media (max-width: 1400px) {
+  .streamer__videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .streamer__videos__left,
+  .streamer__videos__right {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .streamer__videos__left,
+  .streamer__videos__right {
+    width: 100%;
+  }
+}
+.gamer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.gamer img {
+  width: 50%;
+}
+
+.gamer__card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+  gap: 10px;
+}
+
+.gamer__card {
+  gap: 30px;
+  width: 60%;
+}
+
+@media (max-width: 1250px) {
+  .gamer__card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 30px;
+  }
+}
+@media (max-width: 1250px) {
+  .gamer__card {
+    width: 100%;
+  }
+}
+.footer__list, .footer__logo {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 20px;
+}
+
+footer {
+  padding-top: 80px;
+  background: url(../images/hero-bacground.png) center;
+}
+
+.footer__list {
+  color: white;
+}
+
+.footer__list h3 {
+  color: white;
+}
+
+.footer__logo p {
+  color: white;
+}
+
+.footer__top {
+  padding-bottom: 50px;
+  border-bottom: 1px solid white;
+}
+
+.footer__bottom {
+  padding: 50px 0px;
+  color: white;
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  .footer__top {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+  }
+  .footer__list, .footer__logo {
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .footer__bottom {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .footer__bottom a {
+    display: inline-block;
+    width: 32%;
+  }
+  .footer__list, .footer__logo {
+    text-align: center;
+    width: 80%;
+  }
+}

@@ -1,0 +1,59 @@
+.footer__list,.footer__logo{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 20px;
+}
+
+footer{
+    padding-top: 80px;
+    background: url(../images/hero-bacground.png) center;
+}
+.footer__list{
+    color: $secondaryColor;
+}
+
+.footer__list h3{
+    color: $secondaryColor;
+}
+
+.footer__logo p{
+    color: $secondaryColor;
+}
+
+.footer__top{
+    padding-bottom: 50px;
+    border-bottom: 1px solid $secondaryColor;
+}
+
+.footer__bottom{
+    padding: 50px 0px;
+    color: $secondaryColor;
+    align-items: center;
+}
+
+@media(max-width:760px){
+    .footer__top{
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+    }
+    .footer__list,.footer__logo{
+        width: 45%;
+    }
+}
+
+@media(max-width:600px){
+    .footer__bottom{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .footer__bottom a{
+        display: inline-block;
+        width: 32%;
+    }
+    .footer__list,.footer__logo{
+        text-align: center;
+        width: 80%;
+    }
+}
